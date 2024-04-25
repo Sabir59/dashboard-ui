@@ -9,6 +9,8 @@ import {
   heroDocument,
   heroChartPie,
   heroBell,
+  heroBars3,
+  heroSquare3Stack3d,
 } from '@ng-icons/heroicons/outline';
 
 @Component({
@@ -23,36 +25,35 @@ import {
       heroDocument,
       heroChartPie,
       heroBell,
+      heroBars3,
+      heroSquare3Stack3d,
     }),
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
+  toggleSidebar: boolean = false;
   toggleDropdown: Record<string, boolean> = {
-    rooms: false,
-    accounts: false,
-    devTeam: false,
-    bookings: false,
-    revenue: false,
-    transactions: false,
-    settings: false,
+    reports: false,
+    users: false,
+    help: false,
   };
 
   dropdownToggleHandler(targetDropdown: string): void {
     const updatedStates: Record<string, boolean> = {};
-    console.log(targetDropdown);
-
-    // Set the clicked dropdown to its opposite state
     updatedStates[targetDropdown] = !this.toggleDropdown[targetDropdown];
 
-    // Close all other dropdowns
     Object.keys(this.toggleDropdown).forEach((key) => {
       if (key !== targetDropdown) {
         updatedStates[key] = false;
       }
     });
-
     this.toggleDropdown = updatedStates;
+  }
+  // Define the toggleSidebarState function
+  toggleSidebarState(): void {
+    console.log(this.toggleSidebar);
+    this.toggleSidebar = !this.toggleSidebar;
   }
 }
