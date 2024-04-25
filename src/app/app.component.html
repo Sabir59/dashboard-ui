@@ -1,6 +1,7 @@
-<router-outlet>
-  <div class="grid grid-cols-[256px_1fr] bg-[#081028]">
-    <app-sidebar></app-sidebar>
-    <div class="header">header</div>
+<div class="grid grid-cols-[256px_1fr] bg-[#081028]">
+  <app-sidebar></app-sidebar>
+  <div class="content">
+    <app-header></app-header>
+    <router-outlet> </router-outlet>
   </div>
-</router-outlet>
+</div>
