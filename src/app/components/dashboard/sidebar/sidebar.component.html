@@ -1,1 +1,179 @@
-<p>sidebar works!</p>
+<aside class="sidebar">
+    <!-- Header  -->
+    <div class="sidebar__header">
+        <!-- <a href="/" class="sidebar__logo">
+            <Image src={logoMain} alt="Photo" />
+        </a> -->
+        <div class="sidebar__icon">
+            <p class="font-semibold text-xl text-white">Dashboard</p>
+        </div>
+    </div>
+    <!-- {/* Body */} -->
+    <div class="sidebar__body">
+        <!-- {/* Panel Basic */} -->
+        <section class="sidebar__panel">
+            <small class="sidebar__subTitle">Basic</small>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroDocumentChartBar"></ng-icon>
+                        Overview
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link"
+                        (click)="toggleDropdown['rooms'] = !toggleDropdown['rooms']; $event.preventDefault()">
+                        <ng-icon name="heroDocument"></ng-icon>
+                        reports
+                        <ng-icon name="heroChevronDown"></ng-icon>
+                    </a>
+                    <ul class="sidebar__dropdown" [ngClass]="{'!max-h-72': toggleDropdown['rooms']}">
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                legal report
+                            </a>
+                        </li>
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="/dashboard/daily" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                daily report
+                            </a>
+                        </li>
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                weekly report
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroChartPie"></ng-icon>
+                        sales
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroBell"></ng-icon>
+                        notifications
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        settings
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- {/* Panel Rooms */} -->
+        <section class="sidebar__panel">
+            <small class="sidebar__subTitle">Rooms Management</small>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link"
+                        (click)="toggleDropdown['rooms'] = !toggleDropdown['rooms']; $event.preventDefault()">
+                        <ng-icon name=" heroUsers"></ng-icon>
+                        rooms config
+                        <ng-icon name="heroChevronDown"></ng-icon>
+                    </a>
+                    <ul class="sidebar__dropdown" [ngClass]="{'!max-h-72': toggleDropdown['rooms']}">
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                add room
+                            </a>
+                        </li>
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                edit room
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <!-- {/* Panel Finance */} -->
+        <section class="sidebar__panel">
+            <small class="sidebar__subTitle">Financial</small>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link"
+                        (click)="toggleDropdown['accounts'] = !toggleDropdown['accounts']; $event.preventDefault()">
+                        <ng-icon name=" heroUsers"></ng-icon>
+                        rooms config
+                        <ng-icon name="heroChevronDown"></ng-icon>
+                    </a>
+                    <ul class="sidebar__dropdown" [ngClass]="{'!max-h-72': toggleDropdown['accounts']}">
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                add room
+                            </a>
+                        </li>
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                edit room
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        transactions
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        expenses
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- {/* Help */} -->
+        <section class="sidebar__panel">
+            <small class="sidebar__subTitle">Help / Support</small>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        dev team
+                        <ng-icon name="heroUsers"></ng-icon>
+                    </a>
+                    <ul class="sidebar__dropdown">
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                add room
+                            </a>
+                        </li>
+                        <li class="sidebar__dropdownItem">
+                            <a routerLink="#" class="sidebar__dropdownLink">
+                                <ng-icon name="heroUsers"></ng-icon>
+                                edit room
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        finance team
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a routerLink="#" class="sidebar__link">
+                        <ng-icon name="heroUsers"></ng-icon>
+                        operations
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</aside>

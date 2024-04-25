@@ -21,13 +21,13 @@
     @apply text-sm text-slate-600;
   }
   &__input {
-    @apply border border-slate-300 px-5 py-2 rounded-sm flex focus:outline-[#3A4F39];
+    @apply border border-slate-300 px-5 py-2 rounded-sm flex focus:outline-[#F59E0B];
   }
   &__checkbox {
     @apply flex gap-1 items-center;
   }
   &__btn {
-    @apply bg-[#3A4F39] text-white font-semibold px-3 py-2 rounded-sm text-center;
+    @apply bg-[#F59E0B] text-white font-semibold px-3 py-2 rounded-sm text-center;
   }
   &__noAccount {
     @apply flex justify-center items-center gap-1;
