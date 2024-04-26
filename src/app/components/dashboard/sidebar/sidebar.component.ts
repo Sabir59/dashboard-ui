@@ -51,7 +51,7 @@ export class SidebarComponent {
     });
     this.toggleDropdown = updatedStates;
   }
-  // Define the toggleSidebarState function
+  
   toggleSidebarState(): void {
     console.log(this.toggleSidebar);
     this.toggleSidebar = !this.toggleSidebar;

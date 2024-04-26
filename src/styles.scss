@@ -10,3 +10,13 @@ body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
 }
+
+@layer reset, primeng;
+
+@layer reset {
+  button {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
