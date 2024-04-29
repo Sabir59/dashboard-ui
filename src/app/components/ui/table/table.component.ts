@@ -1,78 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { Customer, Representative } from '../../domain/customer';
-import { CustomerService } from '../../service/customerservice';
-import { TableModule } from 'primeng/table';
+import { Component } from '@angular/core';
+import { Product } from './product';
+import { ProductService } from './service';
+import { getImports } from './fixtures/getImport';
+import { NgFor } from '@angular/common';
+
+interface Column {
+  field: string;
+  header: string;
+}
+
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [Component, TableModule, Customer, Representative, CustomerService],
+  imports: [...getImports, NgFor],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss',
+  providers: [ProductService],
 })
 export class TableComponent {
-  customers!: Customer[];
+  products!: Product[];
 
-  selectedCustomers!: Customer[];
+  cols!: Column[];
 
-  representatives!: Representative[];
-
-  statuses!: any[];
-
-  loading: boolean = true;
-
-  activityValues: number[] = [0, 100];
-
-  constructor(private customerService: CustomerService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
-    this.customerService.getCustomersLarge().then((customers) => {
-      this.customers = customers;
-      this.loading = false;
-
-      this.customers.forEach(
-        (customer) => (customer.date = new Date(<Date>customer.date))
-      );
+    this.productService.getProductsMini().then((data) => {
+      this.products = data;
     });
 
-    this.representatives = [
-      { name: 'Amy Elsner', image: 'amyelsner.png' },
-      { name: 'Anna Fali', image: 'annafali.png' },
-      { name: 'Asiya Javayant', image: 'asiyajavayant.png' },
-      { name: 'Bernardo Dominic', image: 'bernardodominic.png' },
-      { name: 'Elwin Sharvill', image: 'elwinsharvill.png' },
-      { name: 'Ioni Bowcher', image: 'ionibowcher.png' },
-      { name: 'Ivan Magalhaes', image: 'ivanmagalhaes.png' },
-      { name: 'Onyama Limba', image: 'onyamalimba.png' },
-      { name: 'Stephen Shaw', image: 'stephenshaw.png' },
-      { name: 'Xuxue Feng', image: 'xuxuefeng.png' },
+    this.cols = [
+      { field: 'code', header: 'Code' },
+      { field: 'name', header: 'Name' },
+      { field: 'category', header: 'Category' },
+      { field: 'quantity', header: 'Quantity' },
     ];
-
-    this.statuses = [
-      { label: 'Unqualified', value: 'unqualified' },
-      { label: 'Qualified', value: 'qualified' },
-      { label: 'New', value: 'new' },
-      { label: 'Negotiation', value: 'negotiation' },
-      { label: 'Renewal', value: 'renewal' },
-      { label: 'Proposal', value: 'proposal' },
-    ];
-  }
-
-  getSeverity(status: string) {
-    switch (status) {
-      case 'unqualified':
-        return 'danger';
-
-      case 'qualified':
-        return 'success';
-
-      case 'new':
-        return 'info';
-
-      case 'negotiation':
-        return 'warning';
-
-      case 'renewal':
-        return null;
-    }
   }
 }

@@ -4,16 +4,13 @@
     <a href="/" class="sidebar__logo">
       <img src="../../../../assets/images/logo-main.png" alt="Logo" />
     </a>
-    <button class="sidebar__icon" (click)="toggleSidebarState()" disabled>
+    <button type="button" class="sidebar__icon" (click)="toggleSidebarState()" disabled>
       <ng-icon name="heroBars3"></ng-icon>
     </button>
   </div>
   <div class="hero__search">
-    <input
-      type="text"
-      placeholder="Search"
-      class="hero__input w-full bg-[#0B1739] mt-10 px-5 py-2 rounded-md text-white"
-    />
+    <input type="text" placeholder="Search"
+      class="hero__input w-full bg-[#0B1739] mt-10 px-5 py-2 rounded-md text-white" />
   </div>
   <!-- Body -->
   <div class="sidebar__body">
@@ -28,19 +25,12 @@
           </a>
         </li>
         <li class="sidebar__item">
-          <a
-            href="#"
-            class="sidebar__link"
-            (click)="dropdownToggleHandler('reports'); $event.preventDefault()"
-          >
+          <a routerLink="/dashboard/reports" class="sidebar__link" (click)="dropdownToggleHandler('reports'); $event.preventDefault()">
             <ng-icon name="heroDocument"></ng-icon>
             reports
             <ng-icon name="heroChevronDown"></ng-icon>
           </a>
-          <ul
-            class="sidebar__dropdown"
-            [ngClass]="{ '!max-h-72': toggleDropdown['reports'] }"
-          >
+          <ul class="sidebar__dropdown" [ngClass]="{ '!max-h-72': toggleDropdown['reports'] }">
             <li class="sidebar__dropdownItem">
               <a routerLink="/daily" class="sidebar__dropdownLink">
                 daily report
@@ -78,19 +68,12 @@
       <small class="sidebar__subTitle">Users Management</small>
       <ul class="sidebar__list">
         <li class="sidebar__item">
-          <a
-            href="#"
-            class="sidebar__link"
-            (click)="dropdownToggleHandler('users'); $event.preventDefault()"
-          >
+          <a href="#" class="sidebar__link" (click)="dropdownToggleHandler('users'); $event.preventDefault()">
             <ng-icon name="heroUsers"></ng-icon>
             users
             <ng-icon name="heroChevronDown"></ng-icon>
           </a>
-          <ul
-            class="sidebar__dropdown"
-            [ngClass]="{ '!max-h-72': toggleDropdown['users'] }"
-          >
+          <ul class="sidebar__dropdown" [ngClass]="{ '!max-h-72': toggleDropdown['users'] }">
             <li class="sidebar__dropdownItem">
               <a routerLink="#" class="sidebar__dropdownLink"> add user </a>
             </li>
