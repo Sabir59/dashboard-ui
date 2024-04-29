@@ -1,19 +1,32 @@
 <div class="card">
-    <p-table [value]="reports" [tableStyle]="{ 'min-width': '50rem' }">
-        <ng-template pTemplate="header">
+    <p-table [columns]="cols" [value]="reports" styleClass="p-datatable-gridlines"
+        [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[5, 10, 20]">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                Reports
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns class="bg-slate-300">
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
+                <th *ngFor="let col of columns">
+                    {{ col.header }}
+                </th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-reports>
-            <tr>
-                <td>{{ reports.id }}</td>
-                <td>{{ reports.name }}</td>
-                <td>{{ reports.description }}</td>
-                <!-- <td>{{ reports.quantity }}</td> -->
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr class="border-b">
+                <td *ngFor="let col of columns">
+                    {{ rowData[col.field] }}
+                </td>
             </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
         </ng-template>
     </p-table>
 </div>
