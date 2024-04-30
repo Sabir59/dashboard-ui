@@ -2,29 +2,36 @@
   <!-- Header  -->
   <div class="sidebar__header">
     <a href="/" class="sidebar__logo">
-      <img src="../../../../assets/images/logo-main.png" alt="Logo" />
+      <h1 class="font-medium text-white text-xl">Reports Dashboard</h1>
+      <!-- <img src="../../../../assets/images/logo-main.png" alt="Logo" /> -->
     </a>
     <!-- <button type="button" class="sidebar__icon" (click)="toggleSidebarState()" disabled>
       <ng-icon name="heroBars3"></ng-icon>
     </button> -->
   </div>
-  <div class="hero__search">
+  <!-- <div class="hero__search">
     <input type="text" placeholder="Search"
       class="hero__input w-full bg-[#0B1739] mt-10 px-5 py-2 rounded-md text-white" />
-  </div>
+  </div> -->
   <!-- Body -->
   <div class="sidebar__body">
     <!-- Panel Basic -->
     <section class="sidebar__panel">
       <small class="sidebar__subTitle">dashboard</small>
       <ul class="sidebar__list">
-        <li class="sidebar__item">
+        <!-- <li class="sidebar__item">
           <a routerLink="#" class="sidebar__link">
             <ng-icon name="heroDocumentChartBar"></ng-icon>
             Overview
           </a>
-        </li>
+        </li> -->
         <li class="sidebar__item">
+          <a routerLink="/dashboard/reports" class="sidebar__link">
+            <ng-icon name="heroDocument"></ng-icon>
+            reports
+          </a>
+        </li>
+        <!-- <li class="sidebar__item">
           <a routerLink="/dashboard/reports" class="sidebar__link" (click)="dropdownToggleHandler('reports'); $event.preventDefault()">
             <ng-icon name="heroDocument"></ng-icon>
             reports
@@ -42,8 +49,8 @@
               </a>
             </li>
           </ul>
-        </li>
-        <li class="sidebar__item">
+        </li> -->
+        <!-- <li class="sidebar__item">
           <a routerLink="#" class="sidebar__link">
             <ng-icon name="heroChartPie"></ng-icon>
             products
@@ -60,11 +67,11 @@
             <ng-icon name="heroSquare3Stack3d"></ng-icon>
             tasks
           </a>
-        </li>
+        </li> -->
       </ul>
     </section>
     <!-- Panel Rooms -->
-    <section class="sidebar__panel">
+    <!-- <section class="sidebar__panel">
       <small class="sidebar__subTitle">Users Management</small>
       <ul class="sidebar__list">
         <li class="sidebar__item">
@@ -83,9 +90,9 @@
           </ul>
         </li>
       </ul>
-    </section>
+    </section> -->
     <!-- Help -->
-    <section class="sidebar__panel">
+    <!-- <section class="sidebar__panel">
       <small class="sidebar__subTitle">Help / Support</small>
       <ul class="sidebar__list">
         <li class="sidebar__item">
@@ -98,6 +105,6 @@
           <a routerLink="#" class="sidebar__link"> operations </a>
         </li>
       </ul>
-    </section>
+    </section> -->
   </div>
 </aside>
