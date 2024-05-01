@@ -1,13 +1,108 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// Fonts
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Thin.ttf");
+  font-weight: 100;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-ThinItalic.ttf");
+  font-weight: 100;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-ExtraLight.ttf");
+  font-weight: 200;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-ExtraLightItalic.ttf");
+  font-weight: 200;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Light.ttf");
+  font-weight: 300;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-LightItalic.ttf");
+  font-weight: 300;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Regular.ttf");
+  font-weight: 400;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Italic.ttf");
+  font-weight: 400;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Medium.ttf");
+  font-weight: 500;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-MediumItalic.ttf");
+  font-weight: 500;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-SemiBold.ttf");
+  font-weight: 600;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-SemiBoldItalic.ttf");
+  font-weight: 600;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-Bold.ttf");
+  font-weight: 700;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-BoldItalic.ttf");
+  font-weight: 700;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-ExtraBold.ttf");
+  font-weight: 800;
+  fallback: Serif;
+}
+@font-face {
+  font-family: "DmSans";
+  src: url("./assets/fonts/DMSans-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  fallback: Serif;
+}
+
 body {
-  // @apply bg-slate-200;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DmSans", sans-serif;
   font-optical-sizing: auto;
 }
 

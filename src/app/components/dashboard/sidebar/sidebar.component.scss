@@ -31,7 +31,7 @@
   &__dropdownLink {
     @apply flex items-center gap-2 text-sm text-gray-400 capitalize p-1 rounded-sm hover:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white;
   }
-  /* WebKit (Safari, Chrome, etc.) */
+
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -52,8 +52,8 @@
   /* Firefox */
   /* Firefox does not support styling the scrollbar directly with CSS, but you can use pseudo-elements to style it */
   /* These properties will only work in Firefox */
-  &* {
-    scrollbar-width: thin;
-    scrollbar-color: #030711 #0a1330;
-  }
+  // &* {
+  //   scrollbar-width: thin;
+  //   scrollbar-color: #030711 #0a1330;
+  // }
 }
