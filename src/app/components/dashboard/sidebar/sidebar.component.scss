@@ -1,0 +1,59 @@
+.sidebar {
+  @apply max-w-[256px] bg-[#081028] p-6 pt-0 h-full min-h-screen max-h-screen overflow-y-auto shadow-[0px_8px_28px_#010511];
+
+  &__header {
+    @apply flex gap-8 items-center justify-between sticky top-0 z-10 pt-6;
+  }
+  &__icon {
+    @apply cursor-pointer text-white text-xl;
+  }
+  &__body {
+    @apply mt-8 flex flex-col gap-8;
+  }
+  &__panel {
+  }
+  &__subTitle {
+    @apply block mb-3 text-gray-400 capitalize;
+  }
+  &__list {
+  }
+  &__item {
+  }
+  &__link {
+    @apply hover:bg-[#0A1330] hover:text-white focus:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white flex gap-2 items-center text-sm font-medium text-[#AEB9E1] capitalize p-2 rounded-md;
+  }
+  &__dropdown {
+    @apply pl-2 w-full block max-h-0 overflow-y-hidden transition-all duration-300 ease-in-out;
+  }
+  &__dropdownItem {
+    @apply hover:bg-[#0A1330];
+  }
+  &__dropdownLink {
+    @apply flex items-center gap-2 text-sm text-gray-400 capitalize p-1 rounded-sm hover:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #0a1330;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #0a1330;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #0a1330;
+  }
+
+  /* Firefox */
+  /* Firefox does not support styling the scrollbar directly with CSS, but you can use pseudo-elements to style it */
+  /* These properties will only work in Firefox */
+  // &* {
+  //   scrollbar-width: thin;
+  //   scrollbar-color: #030711 #0a1330;
+  // }
+}
