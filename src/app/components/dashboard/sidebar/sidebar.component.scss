@@ -1,14 +1,14 @@
 .sidebar {
-  @apply rounded-r-xl rounded-b-none max-w-[256px] bg-[#081028] p-6 pt-0 h-full min-h-screen max-h-screen overflow-y-auto;
+  @apply rounded-r-xl rounded-b-none max-w-[256px] bg-[#081028] pt-0 h-full min-h-screen max-h-screen overflow-y-auto;
 
   &__header {
-    @apply flex gap-8 items-center justify-between sticky top-0 z-10 pt-6;
+    @apply flex gap-8 items-center justify-between sticky top-0 z-10 p-6 bg-[#081028];
   }
   &__icon {
     @apply cursor-pointer text-white text-2xl;
   }
   &__body {
-    @apply mt-8 flex flex-col gap-8;
+    @apply mt-2 px-6 flex flex-col gap-8;
   }
   &__panel {
   }
