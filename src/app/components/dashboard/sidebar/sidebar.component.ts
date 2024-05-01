@@ -2,16 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import {
-  heroUsers,
-  heroChevronDown,
-  heroDocumentChartBar,
-  heroDocument,
-  heroChartPie,
-  heroBell,
-  heroBars3,
-  heroSquare3Stack3d,
-} from '@ng-icons/heroicons/outline';
+import { getImportsIcons } from './constants/getImports';
 
 @Component({
   selector: 'app-sidebar',
@@ -19,14 +10,7 @@ import {
   imports: [NgIconComponent, RouterLink, CommonModule],
   viewProviders: [
     provideIcons({
-      heroUsers,
-      heroChevronDown,
-      heroDocumentChartBar,
-      heroDocument,
-      heroChartPie,
-      heroBell,
-      heroBars3,
-      heroSquare3Stack3d,
+      ...getImportsIcons,
     }),
   ],
   templateUrl: './sidebar.component.html',
@@ -51,7 +35,7 @@ export class SidebarComponent {
     });
     this.toggleDropdown = updatedStates;
   }
-  
+
   toggleSidebarState(): void {
     console.log(this.toggleSidebar);
     this.toggleSidebar = !this.toggleSidebar;
