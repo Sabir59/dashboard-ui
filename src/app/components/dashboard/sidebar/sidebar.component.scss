@@ -21,7 +21,7 @@
   &__item {
   }
   &__link {
-    @apply hover:bg-[#0A1330] hover:text-white focus:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white flex gap-2 items-center text-sm  text-[#AEB9E1] capitalize p-2 rounded-md;
+    @apply hover:bg-[#0A1330] hover:text-white focus:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white flex gap-2 items-center text-[15px] text-[#AEB9E1] capitalize p-2 rounded-md;
   }
   &__dropdown {
     @apply pl-2 w-full block max-h-0 overflow-y-hidden transition-all duration-300 ease-in-out;
