@@ -31,11 +31,59 @@
             Welcome
           </a>
         </li>
-        <li class="sidebar__item">
-          <a routerLink="/dashboard/reports" class="sidebar__link">
+        <li class="sidebar__item sidebar__item--dropdown">
+          <a class="sidebar__link" (click)="dropdownToggleHandler('reports'); $event.preventDefault()">
             <img src="assets/icons/ic-mealpreps.svg" alt="Meal Preps">
             Meal Prep Reports
+            <ng-icon name="heroChevronDown"></ng-icon>
           </a>
+          <ul class="sidebar__dropdown" [ngClass]="{ '!max-h-72': toggleDropdown['reports'] }">
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                dashboard
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                packing slips
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                cooking reports
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                tip reports
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                revenue reports
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                route reports
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                ingredients reports
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/dashboard/reports" class="sidebar__dropdownLink">
+                ingredients by meals
+              </a>
+            </li>
+            <li class="sidebar__dropdownItem">
+              <a routerLink="/daily" class="sidebar__dropdownLink">
+                Meal Prep Settings
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="sidebar__item">
           <a routerLink="#" class="sidebar__link">

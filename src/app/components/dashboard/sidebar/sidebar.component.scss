@@ -1,5 +1,5 @@
 .sidebar {
-  @apply rounded-r-xl rounded-b-none max-w-[256px] bg-[#081028] pt-0 h-full min-h-screen max-h-screen overflow-y-auto;
+  @apply rounded-r-xl rounded-b-none max-w-[280px] bg-[#081028] pt-0 h-full min-h-screen max-h-screen overflow-y-auto;
 
   &__header {
     @apply flex gap-8 items-center justify-between sticky top-0 z-10 p-6 bg-[#081028];
@@ -19,18 +19,21 @@
     @apply flex flex-col gap-2;
   }
   &__item {
+    &--dropdown {
+      @apply cursor-pointer;
+    }
   }
   &__link {
     @apply hover:bg-[#0A1330] hover:text-white focus:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white flex gap-2 items-center text-[15px] text-[#AEB9E1] capitalize p-2 rounded-md;
   }
   &__dropdown {
-    @apply pl-2 w-full block max-h-0 overflow-y-hidden transition-all duration-300 ease-in-out;
+    @apply px-7 w-full block max-h-0 overflow-y-hidden transition-all duration-300 ease-in-out;
   }
   &__dropdownItem {
     @apply hover:bg-[#0A1330];
   }
   &__dropdownLink {
-    @apply flex items-center gap-2 text-sm text-gray-400 capitalize p-1 rounded-sm hover:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white;
+    @apply pl-2 flex items-center gap-2 text-sm text-[#AEB9E1] capitalize p-1 rounded-sm hover:bg-[#0A1330] border-l-4 border-transparent focus:border-l-4 focus:border-[#CB3CFF] focus:text-white;
   }
 
   &::-webkit-scrollbar {
